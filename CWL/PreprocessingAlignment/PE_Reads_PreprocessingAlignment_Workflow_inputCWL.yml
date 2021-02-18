@@ -1,0 +1,77 @@
+raw_fastq_array:
+  - [{class: File, path: },
+  {class: File, path: }]
+  - [{class: File, path: },
+  {class: File, path: }]
+  
+  #add one input file array (use the samples above as models)
+  #for each of the samples to analyse
+
+trimmed_fastq_basename_array:
+  - *_trimmed.fq.gz
+  - *_trimmed.fq.gz
+  
+  #replace * with the file basename of choice
+  #add a file name to the array for each of the samples to
+  #analyse
+
+
+leading: 20
+
+trailing: 20
+
+slidingwindow: [10, 20]
+
+reads_minlength: 50
+
+bowtie_idx: GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.bowtie_index
+
+threads_num: 4
+
+rg_id_array:
+  - #ReadGroupID
+  - #ReadGroupID
+
+  #add a read group ID to the array for each of the samples
+  #to analyse
+
+rg_additional_fields_array:
+  - [SM:,
+  PL:, PU:, LB:]
+  - [SM:,
+  PL:, PU:, LB:]
+
+  #add an array for read group additional fields for each of
+  #the samples to analyse
+
+output_name_array:
+  - *_aligned.sam
+  - *_aligned.sam
+  
+  #replace * with the file basename of choice
+  #add a file name to the array for each of the samples to
+  #analyse
+
+bam_file_name_array:
+  - *_aligned.bam
+  - *_aligned.bam
+  
+  #replace * with the file basename of choice
+  #add a file name to the array for each of the samples to
+  #analyse
+  
+sorted_bam_name_array:
+  - *_aligned_sorted.bam
+  - *_aligned_sorted.bam
+
+  #replace * with the file basename of choice
+  #add a file name to the array for each of the samples to
+  #analyse
+  
+bam_index_name_array:
+  - *_aligned_sorted.bam.bai
+  - *_aligned_sorted.bam.bai
+  
+  #replace * with the file basename of choice
+  #add a file name to the array for each of the samples to
+  #analyse
