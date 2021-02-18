@@ -1,0 +1,9 @@
+Reference_FASTA:
+  class: File
+  path: #path to file
+
+BAM_file:
+  class: File
+  path: #path to file
+
+VCF_file_name: #output file name
