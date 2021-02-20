@@ -1,3 +1,5 @@
+#File in YAML format describing the inputs of the homonymous CWL workflow.
+
 raw_fastq_array:
   - [{class: File, path: },
   {class: File, path: }]
