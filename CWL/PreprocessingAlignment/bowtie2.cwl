@@ -1,3 +1,6 @@
+#CWL description of a typical Bowtie2 command line for the alignment of PE reads to the human reference genome (hg38).
+#The process is optimized to obtain results suitable with downstream variant calling with different algorithms.
+
 cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: bowtie2
