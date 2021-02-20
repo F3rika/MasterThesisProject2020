@@ -1,3 +1,8 @@
+#CWL workflow describing the typical analysis process applied to prepare sequencing data for variant calling.
+#Data are first trimmed to improve reads general quality and then aligned to the reference genome (in this case the human hg38 reference genome).
+#Alignment results are compressed in BAM format, sorted and indexed.
+#The tools used in this workflow are: Trimmomatic (trimming), Bowtie2 (alignment) and SAMtools (compression, sorting and indexing)
+
 cwlVersion: v1.0
 class: Workflow
 
