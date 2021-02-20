@@ -1,3 +1,5 @@
+#CWL description of a typical SAMtools command line to sort alignment results (in BAM format).
+
 cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: [samtools, sort]
