@@ -1,3 +1,5 @@
+#CWL description of a typical Trimmomatic command line to perform trimming on PE reads.
+
 cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: [java, -jar, trimmomatic-0.39.jar, PE]
