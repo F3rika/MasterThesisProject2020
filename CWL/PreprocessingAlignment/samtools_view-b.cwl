@@ -1,3 +1,5 @@
+#CWL description of a typical SAMtools command line to converts SAM format alignment results in the compressed BAM format.
+
 cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: [samtools, view, -b]
