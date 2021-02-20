@@ -1,3 +1,5 @@
+#CWL description of a typical Freebayes command line to perform variant calling.
+
 cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: freebayes
