@@ -1,3 +1,5 @@
+#CWL description of a typical VarScan pipeline to perform variant calling (specifically of SNPs).
+
 cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: [samtools, mpileup]
