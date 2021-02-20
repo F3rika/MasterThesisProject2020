@@ -1,3 +1,18 @@
+#According to the CoVaCS guidelines the final call-set is obtained by applying a simple consensus majority rule, and only variants that are identified
+#by at least two out of three tools are retained. In the present work, this was implemented by using a custom Python3 script, which is briefly described below. 
+#The script receives a collection of 3 VCF files, one from each different tool in input and all specified with the appropriate option (--freebayes, --varscan
+#and --gatk respectively).
+#Each file is processed, by reading it  line by line. From every line, characteristic features describing a genetic variant (chromosome,  position, reference
+#and alternative allele) are extracted by  the means of the split function and used to compose the key of a Python3 dictionary. These keys are bound to be unique
+#since in VCF files all the possible genetic variants associated with one genomic position are reported on the same line. In the dictionary the value associated
+#with each key is the list of the tools that support a specific variant call.
+#In this project only SNPs are taken in account during the process and, consequently, the script is optimized to process also haplotypes and multiple calls produced
+#by some variant calling tools such as GATK and Freebayes. In these cases, the REF and ALT fields of the VCF file are broken down to single characters and the position
+#of each single SNP reconstructed.
+#Moreover, another critical issue considered is the presence of eventual duplicate calls among single tools files, which are removed to avoid false positive results.
+#In the final step, a canonical  VCF call line is reconstructed for each identified variant supported by at least two tools and printed in the output file.
+#Together with the consensus file, the script produces also three additional outputs containing the variants that are identified only by a single tool.
+
 def idx_creation(inp):
      idx=[]
      freebayes_in=inp.freebayes_vcf
